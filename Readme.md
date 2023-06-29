@@ -1,4 +1,4 @@
-#MySQL Related stuff
+###MySQL Related stuff
 MySql Database Triggers: SQL statement that are automatically Run when a specific table is changes
 ###The Syntax
 ```
@@ -22,7 +22,7 @@ DELETE
 photos
 users 
 ```
-#Example
+###Example
 ```
 DELIMITER $$
 CREATE TRIGGER must_be_adult
@@ -37,7 +37,7 @@ CREATE TRIGGER must_be_adult
 $$
 DELIMITER ;
 ```
-##Example 2
+###Example 2
 ###Step 1. create employee table
 ```
 create table employees(
@@ -99,10 +99,10 @@ b. Click "SQL Editor" tab and uncheck "Safe Updates" check box<br>
 c. Query --> Reconnect to Server // logout and then login<br>
 d. Now execute your SQL query<br>
 
-##What is Latency?
+###What is Latency?
 Latency is a synonym for delay. In telecommunications, low latency is associated with a positive user experience (UX) while high latency is associated with poor UX. In computer networking, latency is an expression of how much time it takes for a data packet to travel from one designated point to another.
 
-##What is Scalability?
+###What is Scalability?
 Scalability is the ability for IT systems – such as applications, storage, databases and networking – to continue to function properly when changed in size or volume. It often refers to increasing or decreasing resources as needed to meet the higher or lower demands of a business.
 ###1. Vertical (scale-up) scalability
 Increases the capacity of hardware or software by adding resources to a physical system, such as adding processing power to a server to make it faster
@@ -110,7 +110,7 @@ Increases the capacity of hardware or software by adding resources to a physical
 ###2. Horizontal (scale-out) scalability
 Connects multiple items in order to work as a single logical unit.
 
-#Multi-Tenant Architecture(Multi-tenancy)
+###Multi-Tenant Architecture(Multi-tenancy)
 In multi-tenant software architecture—also called software multitenancy—a single instance of a software application (and its underlying database and hardware) serves multiple tenants (or user accounts). A tenant can be an individual user, but more frequently, it’s a group of users—such as a customer organization—that shares common access to and privileges within the application instance. Each tenant’s data is isolated from, and invisible to, the other tenants sharing the application instance, ensuring data security and privacy for all tenants
 
 Multi-tenant architecture, more commonly referred to as multi-tenancy, is a software architecture where multiple instances of an application run on the same physical serve
@@ -123,7 +123,7 @@ https://www.datamation.com/cloud/what-is-multi-tenant-architecture
 
 
 
-## N+1 problem in Hibernate & Spring Data JPA
+### N+1 problem in Hibernate & Spring Data JPA
 N+1 problem is a performance issue in Object Relational Mapping that fires multiple select queries (N+1 to be exact, where N = number of records in table) in database for a single select query at application layer. Hibernate & Spring Data JPA provides multiple ways to catch and address this performance problem.
 
 ###N+1 Resolution(Spring Data JPA Approach)
@@ -145,10 +145,10 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
 ```
 
-## Logging in Spring Boot
+### Logging in Spring Boot
 Logback is used for logging by default. Spring Boot preconfigures it with patterns and ANSI colors to make the standard output more readable.
 
-##Log4j2 Configuration Logging
+### Log4j2 Configuration Logging
 While Apache Commons Logging is at the core, and Logback is the reference implementation provided.<br>
 
 NOTE In order to use any logging library other than Logback, though, we need to exclude it from our dependencies.
@@ -176,7 +176,7 @@ NOTE In order to use any logging library other than Logback, though, we need to 
 
 
 
-##Troubleshoot Production performance issue in Web application
+###Troubleshoot Production performance issue in Web application
 1. Does you application uses load balancer>
 2. Check all Instances of JVMs are up and running?
 3. Is there any network latency issue?
@@ -200,7 +200,7 @@ Request and Response work as aspected.
 Then the issue FE, in this case we can check in other browser to verify if engine issue.
 otherwise will check with UI person, here problem can be lib issue, Business log, loading(Eager,Lazy),Paginnation, Ineasted of loading whole data in we can plan other ways.
 
-##Troubleshoot production issue
+###Troubleshoot production issue
 1. If production application is slow/some of the functionality does not work or down
    Then
 2. When the user submit the form server responds with HTTP error code with 500 series
@@ -209,8 +209,6 @@ otherwise will check with UI person, here problem can be lib issue, Business log
 4. First step to identify the logs for your application, Some of the application recordeach and every transaction you have to verify in your application itself
    If log are not available in app then you must be connect to application server using putty/WINSCP and collect the logs, if your application using loadbalancer then need to collect logs of instance
    5 From the logs developer will be able to find the stack trace for 500 code and identify the life code  where axcetly issue occured
-
-
 
 ###How to detect/avoid DeadLock and handle deadlocks in Java application
 
