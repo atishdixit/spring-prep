@@ -1,6 +1,7 @@
-###MySQL Related stuff
+
+### MySQL Related stuff
 MySql Database Triggers: SQL statement that are automatically Run when a specific table is changes
-###The Syntax
+### Syntax
 ```
 CREATE TRIGGER trigger_name 
     trigger_time trigger_event ON table_name FOR EACH ROW
@@ -22,7 +23,7 @@ DELETE
 photos
 users 
 ```
-###Example
+### Example
 ```
 DELIMITER $$
 CREATE TRIGGER must_be_adult
@@ -37,8 +38,8 @@ CREATE TRIGGER must_be_adult
 $$
 DELIMITER ;
 ```
-###Example 2
-###Step 1. create employee table
+### Example 2
+### Step 1. create employee table
 ```
 create table employees(
  firstname varchar(100),
@@ -46,12 +47,12 @@ create table employees(
  employeeNumber int
 );
 ```
-###Step 2. Insert record in employee table
+### Step 2. Insert record in employee table
 ```
 insert into employees(firstname, lastName, employeeNumber) value("Rahul", "Kumar", 1056);
 ```
 
-###Step 3. Create new table employees_audit to hold the audit details
+### Step 3. Create new table employees_audit to hold the audit details
 ```
 CREATE TABLE employees_audit (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -61,7 +62,7 @@ CREATE TABLE employees_audit (
     action VARCHAR(50) DEFAULT NULL
 );
 ```
-###Step 4. Create trigger to add entry for every update happen on employee table
+### Step 4. Create trigger to add entry for every update happen on employee table
 ```
 CREATE TRIGGER before_employee_update 
     BEFORE UPDATE ON employees
@@ -72,7 +73,7 @@ CREATE TRIGGER before_employee_update
      lastname = OLD.lastname,
      changedat = NOW();
  ```
-###To see the trigger entry
+### To see the trigger entry
 ```
  SHOW TRIGGERS;
 ```
@@ -90,33 +91,33 @@ SELECT * FROM employees_audit;
 ```
 
 
-###MySQL Error Codes
+### MySQL Error Codes
 1. <div style="color:green"><i><b>1175</b></i></div>
 I tried to updated row using workbench, Got this error code.
-###Solution
+### Solution
 a.Go to Edit --> Preferences<br>
 b. Click "SQL Editor" tab and uncheck "Safe Updates" check box<br>
 c. Query --> Reconnect to Server // logout and then login<br>
 d. Now execute your SQL query<br>
 
-###What is Latency?
+### What is Latency?
 Latency is a synonym for delay. In telecommunications, low latency is associated with a positive user experience (UX) while high latency is associated with poor UX. In computer networking, latency is an expression of how much time it takes for a data packet to travel from one designated point to another.
 
-###What is Scalability?
+### What is Scalability?
 Scalability is the ability for IT systems – such as applications, storage, databases and networking – to continue to function properly when changed in size or volume. It often refers to increasing or decreasing resources as needed to meet the higher or lower demands of a business.
-###1. Vertical (scale-up) scalability
+### 1. Vertical (scale-up) scalability
 Increases the capacity of hardware or software by adding resources to a physical system, such as adding processing power to a server to make it faster
 
-###2. Horizontal (scale-out) scalability
+### 2. Horizontal (scale-out) scalability
 Connects multiple items in order to work as a single logical unit.
 
-###Multi-Tenant Architecture(Multi-tenancy)
+### Multi-Tenant Architecture(Multi-tenancy)
 In multi-tenant software architecture—also called software multitenancy—a single instance of a software application (and its underlying database and hardware) serves multiple tenants (or user accounts). A tenant can be an individual user, but more frequently, it’s a group of users—such as a customer organization—that shares common access to and privileges within the application instance. Each tenant’s data is isolated from, and invisible to, the other tenants sharing the application instance, ensuring data security and privacy for all tenants
 
 Multi-tenant architecture, more commonly referred to as multi-tenancy, is a software architecture where multiple instances of an application run on the same physical serve
 https://www.datamation.com/cloud/what-is-multi-tenant-architecture
 
-####Types Of Multi-Tenant Databases
+#### Types Of Multi-Tenant Databases
 1.  Shared Database, Shared Schema
 2. Shared Database, Multiple Schemas
 3. Multiple Databases, Multiple Schemas
@@ -126,7 +127,7 @@ https://www.datamation.com/cloud/what-is-multi-tenant-architecture
 ### N+1 problem in Hibernate & Spring Data JPA
 N+1 problem is a performance issue in Object Relational Mapping that fires multiple select queries (N+1 to be exact, where N = number of records in table) in database for a single select query at application layer. Hibernate & Spring Data JPA provides multiple ways to catch and address this performance problem.
 
-###N+1 Resolution(Spring Data JPA Approach)
+### N+1 Resolution(Spring Data JPA Approach)
 ```
 public interface UserRepository extends CrudRepository<User, Long> {
 
@@ -176,7 +177,7 @@ NOTE In order to use any logging library other than Logback, though, we need to 
 
 
 
-###Troubleshoot Production performance issue in Web application
+### Troubleshoot Production performance issue in Web application
 1. Does you application uses load balancer>
 2. Check all Instances of JVMs are up and running?
 3. Is there any network latency issue?
@@ -200,7 +201,7 @@ Request and Response work as aspected.
 Then the issue FE, in this case we can check in other browser to verify if engine issue.
 otherwise will check with UI person, here problem can be lib issue, Business log, loading(Eager,Lazy),Paginnation, Ineasted of loading whole data in we can plan other ways.
 
-###Troubleshoot production issue
+### Troubleshoot production issue
 1. If production application is slow/some of the functionality does not work or down
    Then
 2. When the user submit the form server responds with HTTP error code with 500 series
@@ -210,7 +211,7 @@ otherwise will check with UI person, here problem can be lib issue, Business log
    If log are not available in app then you must be connect to application server using putty/WINSCP and collect the logs, if your application using loadbalancer then need to collect logs of instance
    5 From the logs developer will be able to find the stack trace for 500 code and identify the life code  where axcetly issue occured
 
-###How to detect/avoid DeadLock and handle deadlocks in Java application
+### How to detect/avoid DeadLock and handle deadlocks in Java application
 
 Here I have code with deadlock issue
 ```
@@ -265,7 +266,7 @@ Step 3: Run Jconsole and select Local with you application name.
 Step 4: CLick on Thread tab from Menu.
 will see the all your running thread and click one by one and check the deadlock cause.
 
-###Solution:
+### Solution:
 In this case you can just change the order in same manner
 ```
 package com.ext.prep.deadlock;
@@ -313,13 +314,30 @@ public class ThreadDemo {
     }
 }
 ```
-###Memory Management in Java & Garbage Collection
+### Memory Management in Java & Garbage Collection
 
 
-###Security vulnerabilities in java based applications
+### Security vulnerabilities in java based applications
+Below are the security vulnerabilities aften found in java based applications and will have high impact and severity on the application reliability.
+1. SQL Injection
+2. Unclosed resource/Memory leaks
+3. Direct Traversal attack/Malicious file upload
+4. Cross site Scripting
+5. Password Management(Logging, Hard coding,weak password)
+6. Poor Logging
+7. Improper Exception Handling
+8. improper validation on user Input
 
+1. SQL Injection:
+```
+String query = "Select * from employee where empId= "+empId + " and empName='"+empName+"'";
+case 1. empName=atish' or 1='1;
+case 2. empName='';DROM table user'
+```   
+2. Unclosed resource/Memory leaks
+####  Section Code quality-point 11
 
-##Code quality
+## Code quality
 0 Left shift strategy
 1. Avoid String Concat.
 2. Avoid Multiple returns statements.
@@ -359,7 +377,7 @@ public class AutoClosableDemo {
 13. Dont forget commenting method level, class level.
 14. Use logging properly
 15. Method should be small, Unit test cases writen in such manner, the reviewer can understand in 30-60Sec.
-###Principles:
+### Principles:
 1.  You Ain’t Gonna Need It (YAGNI): - Don’t implement features that may be needed in the future, they are expensive, time-consuming, and probably will be a waste of resources
 2. Don’t Repeat Yourself (DRY): The modification of an element doesn’t require a change in any other logically unrelated elements in a system
 3. Keep It Simple, Stupid (KISS): The simpler your code is, the more maintainable it will be in the future. Avoid fancy features and unnecessary complexity, use them only if they have huge benefits for the design.
@@ -370,3 +388,27 @@ public class AutoClosableDemo {
    d. I — The interface segregation principle
    e. D – The dependency inversion principle  
    https://incora.software/insights/clean-code-principles
+   
+
+# Spring-boot Batch processing
+
+1. Job and Step
+2. Job Types
+   a. TaskLet step(Like Reading from some other, Send email/push notification, etc)
+   b. Chunk oriented step(Reading data from CSV having millions of record)
+   
+### Example:
+#### CSV(Item reader)===>SpringBoot Batch(Item Processor)
+#### SpringBoot Batch(Item Processor)====>(Item writer)MYSQL
+
+
+# SpringBoot Architecture      
+
+### Contexts
+1. Job level context
+2. Step level Context
+
+
+## Cron Expression
+http://www.cronmaker.com/;jsessionid=node016kv76p1fyu071kyk4f5alwz3j169137.node0?0
+
