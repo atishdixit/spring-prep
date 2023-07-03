@@ -408,7 +408,26 @@ public class AutoClosableDemo {
 1. Job level context
 2. Step level Context
 
-
 ## Cron Expression
 http://www.cronmaker.com/;jsessionid=node016kv76p1fyu071kyk4f5alwz3j169137.node0?0
 
+###Microservice:
+1. What is microservices architecture and how it is different from monolithic and SOA architectures.
+2. How to build production ready microservices using  Spring, SpringBoot and Spring Cloud.
+3. What are cloud native apps & 12 factor principles behind them.
+4. Configuration management in microservices using <b>Spring Cloud Config Server</b>.
+5. <b> Service Discovery and Registration </b> pattern inside microservices and how to implement using <b>Spring Eureka server</b>.
+6. Building resilient microservices using <b>RESILIENCE4J</b> framework.
+7. Handling Cross cutting concerns and routing inside microservices using <b>Spring Cloud Gateway</b>.
+8. Implementing <b>Distributed tracing & Log</b> aggregation in microservices using <b>Spring Sleuth and Zipkin</b>.
+9. Monitoring microservices using Prometheus and Grafana.
+10. Role of Docker in microservices and how to build docker images, containers.
+11. Role of Docker compose and how to use it to run all the microservices inside a application.
+12. Most commonly used Docker commands.
+13. Role of Kubernetes in microservices as a <b>container orchestration framework</b>.
+14. How to setup a Kubernetes cluster inside GCP using GKE (Google Kubernetes Engine) and deploy microservices inside it.
+15. Most commonly used Kubernetes commands.
+16. Microservices Security using OAuth2.
+17. What is Helm & it's role in microservices world.
+
+Note: ribbon is no under maintainace mode, no further support
