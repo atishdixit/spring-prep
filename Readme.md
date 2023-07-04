@@ -191,15 +191,16 @@ NOTE In order to use any logging library other than Logback, though, we need to 
 11. if latency issue due to code then nees to rewrite and optimized the latency.
 
 
-Check in browser dev tool and see, cross browser(Browser engine)
-Check UI logs(Traansection logs and try toidentify) if not available then see network tab and identify the time taken in request and response.
-Case 1 if latency problem in API calls
-Then check network and identify network latency
-How? Ping the systm and validated MIN MAX and AVG.
-Case 2 No Latency issue in API response
-Request and Response work as aspected.
-Then the issue FE, in this case we can check in other browser to verify if engine issue.
-otherwise will check with UI person, here problem can be lib issue, Business log, loading(Eager,Lazy),Paginnation, Ineasted of loading whole data in we can plan other ways.
+Check in browser dev tool and see, cross browser(Browser engine).<br>
+Check UI logs(Traansection logs and try toidentify) if not available then see network tab and identify the time taken in request and response.<br>
+Case 1 if latency problem in API calls<br>
+Then check network and identify network latency<br>
+How? Ping the systm and validated MIN MAX and AVG.<br>
+Case 2 No Latency issue in API response<br>
+Request and Response work as aspected.<br>
+Then the issue FE, in this case we can check in other browser to verify if engine issue.<br>
+otherwise will check with UI person, here problem can be lib issue, Business log, loading(Eager,Lazy),
+Paginnation, Ineasted of loading whole data in we can plan other ways.
 
 ### Troubleshoot production issue
 1. If production application is slow/some of the functionality does not work or down
@@ -411,7 +412,7 @@ public class AutoClosableDemo {
 ## Cron Expression
 http://www.cronmaker.com/;jsessionid=node016kv76p1fyu071kyk4f5alwz3j169137.node0?0
 
-###Microservice:
+### Microservice:
 1. What is microservices architecture and how it is different from monolithic and SOA architectures.
 2. How to build production ready microservices using  Spring, SpringBoot and Spring Cloud.
 3. What are cloud native apps & 12 factor principles behind them.
