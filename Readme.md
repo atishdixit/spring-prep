@@ -1,3 +1,52 @@
+## Spring-boot annotations.
+### What Is Spring Boot and What Are Its Main Features?
+It's a Framework build on top of Spring Framework with autoconfiguration and embedded application server support.
+
+### How to Disable a Specific Auto-Configuration?
+// other annotations
+@EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class)
+public class MyConfiguration { }<br>
+OR<br>
+// other annotations
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+public class MyConfiguration { }
+<br>
+
+### How to Register a Custom Auto-Configuration?
+To register an auto-configuration class, we must have its fully qualified name listed under the EnableAutoConfiguration key in the META-INF/spring.factories file:
+<br>
+```
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.baeldung.autoconfigure.CustomAutoConfiguration
+```
+
+### What Are Possible Sources of External Configuration?
+Spring Boot provides support for external configuration, allowing us to run the same application in various environments. We can use properties files, YAML files, environment variables, system properties and command-line option arguments to specify configuration properties.
+<br>
+We can then gain access to those properties using the @Value annotation, a bound object via the @ConfigurationProperties annotation, or the Environment abstraction.
+### Q12. What Does It Mean That Spring Boot Supports Relaxed Binding?
+Relaxed binding in Spring Boot is applicable to the type-safe binding of configuration properties.
+With relaxed binding, the key of a property doesn't need to be an exact match of a property name. Such an environment property can be written in camelCase, kebab-case, snake_case, or in uppercase with words separated by underscores.
+For example, if a property in a bean class with the @ConfigurationProperties annotation is named myProp, it can be bound to any of these environment properties: myProp, my-prop, my_prop, or MY_PROP.
+
+### SpringBoot Annotations. 
+1. @SpringBootApplication (No need to add by default  these will be covered @Configuration, @ComponentScan, and @EnableAutoConfiguration.)
+2. @Configuration
+3. @ComponentScan
+4. @EnableAutoConfiguration
+
+5. @GetMapping
+6. @RequestMapping
+7. @RequestParam
+
+8. @Component
+9. @Service
+10. @Repository
+11. @Controller
+12. @RestController
+
+13. @SpringBootTest
+14. @MockBean
+15. @Validated
 
 ### MySQL Related stuff
 MySql Database Triggers: SQL statement that are automatically Run when a specific table is changes
