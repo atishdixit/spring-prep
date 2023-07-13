@@ -48,6 +48,28 @@ For example, if a property in a bean class with the @ConfigurationProperties ann
 14. @MockBean
 15. @Validated
 
+## Java Performance - Memory and Runtime Analysis
+1. How Java use the heap and the stack
+2. Performance factors:
+   Important influence factors to the performance of a Java program can be separated into two main parts:<br>
+   1. Memory Consumption of the Java program<br>
+   2. Total runtime of a program<br>
+### Memory handling in Java<br>
+ ### Native Memory:<br>
+   Native memory is the memory which is available to a process, e.g. the Java process. Native memory is controlled by the operating system (OS) and based on physical memory and other physical devices, e.g. disks, flash memory, etc.
+
+##JProfiler
+
+##JMeter
+
+##DataDogs
+
+
+
+### What is VisualVM?
+It allows you to trace a running Java program and see its the memory and CPU consumption. You can also use it to create a memory heap dump to analyze the objects in the heap.
+
+
 ### MySQL Related stuff
 MySql Database Triggers: SQL statement that are automatically Run when a specific table is changes
 ### Syntax
