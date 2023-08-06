@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/request/")
 public class RequestController {
 
-
     @GetMapping("/req")
     public ResponseEntity<Result> request(){
         return ResponseEntity.ok(new Result("OK", 200));

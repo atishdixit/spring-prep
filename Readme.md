@@ -503,3 +503,42 @@ http://www.cronmaker.com/;jsessionid=node016kv76p1fyu071kyk4f5alwz3j169137.node0
 17. What is Helm & it's role in microservices world.
 
 Note: ribbon is no under maintainace mode, no further support
+
+
+## Exam AWS Certified Cloud Practitioner
+### Exam Details
+Exam Name:AWS Cloud Practitioner<br>
+Exam Code:CLF-C01 <br>
+Exam Level:Foundational<br>
+Exam Cost:100 USD<br>
+Exam Duration:90 Minutes<br>
+Number of Questions:6<br>5
+Question Format:Multiple Choice/Multiple Response<br>
+Passing Score:	700/1000<br>
+Passing Percentage:70%<br>
+<br>
+The following Cloud Practitioner topics should be addressed when studying for the certification exam:<br>
+1. Technology
+2. Cloud
+3. Security
+4. Billing and pricing
+
+<b>CloudFront</b><br>
+1. The best option for the company to ensure that users can view videos with low latency would be to use Amazon CloudFront. CloudFront is a content delivery network (CDN) that speeds up the delivery of static and dynamic web content, such as HTML, CSS, JavaScript, and images, as well as videos.</br>
+2. CloudFront is a content delivery network (CDN) that speeds up the delivery of static and dynamic web content, such as HTML, CSS, JavaScript, and images, as well as videos.
+3. Amazon CloudFront is a content delivery network (CDN) offered by AWS that helps deliver content, including videos, with low latency and high transfer speeds.
+CloudFront has a vast network of edge locations located globally, which reduces the distance between users and the content they are trying to access. When a user requests a video, CloudFront delivers it from the edge location nearest to the user, resulting in reduced latency.
+
+### The AWS Well-Architected Framework consists of five pillar;
+As per AWS I can see there are total of Six pillars for AWS Well-Architected Framework
+1-Operational Excellence
+2-Security
+3-Cost Optimization
+4-Reliability
+5-Performance Efficiency
+6-Sustainability 
+
+
+Elastic beanstalk
+
+

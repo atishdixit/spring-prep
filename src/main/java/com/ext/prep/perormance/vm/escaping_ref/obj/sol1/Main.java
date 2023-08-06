@@ -12,9 +12,5 @@ public class Main {
 		//Problem here you can chages
 		//records.findByName("John").setName("Hello");//CTE
 		//System.out.println(records.findByName("John"));
-
-
-
 	}
-	
 }
